@@ -5,11 +5,20 @@
   <title>Counter Components Demo</title>
   <script src="counter-display.js"></script>
   <script src="counter-controls.js"></script>
+  <script src="combined-counter.js"></script>
+  <script src="counter-display-b.js"></script>
+  <script src="counter-controls-b.js"></script>
+
 </head>
 <body style="font-family:sans-serif; display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:30px;">
 
 
+
+    
+  <h2>Contoh 1 (komponen terpisah varian A)</h2>
+
   <!-- Komponen 1 -->
+
   <counter-display id="display" title="Lorem Ipsum Title" value="99"></counter-display>
   <!-- Komponen 2 -->
   <counter-controls id="controls"></counter-controls>
@@ -24,21 +33,22 @@
       display.count += e.detail.delta;
     });
   </script>
-  
-  <script src="combined-counter.js"></script>
+
+
+  <h2>Contoh 2 (bagian display dan controls digabung)</h2>
+
+  <!-- Komponen 3: Combined Counter -->
 
   <combined-counter title="Lorem Ipsum Title" value="99"></combined-counter>
 
+  <h2>Contoh 3 (komponen terpisah varian B)</h2>
 
+  <!-- Variant B -->
+  <!-- Komponen 1 varian B -->
 
-  <script src="counter-display-b.js"></script>
-  <script src="counter-controls-b.js"></script>
-
-  <!-- Varian B -->
   <counter-display-b id="displayB" title="Varian B Counter" value="10"></counter-display-b>
   <counter-controls-b target="displayB"></counter-controls-b>
 
 
-  
 </body>
 </html>
